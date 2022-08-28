@@ -8,7 +8,8 @@ GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 counter: int = 0
 resulting_emoji: str = ""
-s: int = 0 # a variable that measures the number of times an element in the user guess (that matched one of the elements of SECRET_WORD) has appeared as emoji box
+s: int = 0 # a variable that measures the number of times an element in the user guess 
+# (that matched one of the elements of SECRET_WORD) has appeared as emoji box
 
 user_guess: str = input("What is your 6-letter guess? ")
 
