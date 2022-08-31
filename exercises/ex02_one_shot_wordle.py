@@ -8,8 +8,7 @@ GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 counter: int = 0
 resulting_emoji: str = ""
-s: int = 0 # a variable that measures the number of times an element in the user guess 
-# (that matched one of the elements of SECRET_WORD) has appeared as emoji box
+appearance_on_emoji_result: int = 0 
 
 user_guess: str = input("What is your 6-letter guess? ")
 
@@ -18,19 +17,19 @@ while len(user_guess) != 6:
 
 while counter < len(user_guess):
     if user_guess[counter] == SECRET_WORD[counter]:
-        resulting_emoji = resulting_emoji + GREEN_BOX + " "
+        resulting_emoji = resulting_emoji + GREEN_BOX
 
     else:
-        s = 0
+        appearance_on_emoji_result = 0
         for i in range(0, len(user_guess)):
             if user_guess[counter] == SECRET_WORD[i]:
-                if s < 1:
-                    resulting_emoji = resulting_emoji + YELLOW_BOX + " "
-                    s += 1
+                if appearance_on_emoji_result < 1:
+                    resulting_emoji = resulting_emoji + YELLOW_BOX
+                    appearance_on_emoji_result += 1
                 else:
                     pass
-            elif (user_guess[counter] != SECRET_WORD[i]) and (i == len(user_guess) - 1) and (s == 0):
-                resulting_emoji = resulting_emoji + WHITE_BOX + " "
+            elif (user_guess[counter] != SECRET_WORD[i]) and (i == len(user_guess) - 1) and (appearance_on_emoji_result == 0):
+                resulting_emoji = resulting_emoji + WHITE_BOX
             else:
                 pass
     
