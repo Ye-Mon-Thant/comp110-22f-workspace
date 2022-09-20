@@ -40,6 +40,7 @@ def sub(input3: list[int], start_index: int, end_index: int) -> list[int]:
             return result_sublist
     else:
         print("The code went through here, which is unexpected.")
+        return result_sublist
         
 
 def concat(input1: list[int], input2: list[int]) -> list[int]:
