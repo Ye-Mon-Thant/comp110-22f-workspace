@@ -4,6 +4,7 @@ __author__ = "730548206"
 
 from utils import only_evens, sub, concat
 
+
 def test_only_evens_all_empty() -> None:
     """Empty list given."""
     xs: list[int] = []
@@ -58,30 +59,30 @@ def test_concat_empty() -> None:
 def test_sub_empty() -> None:
     """Sub two empty lists."""
     xs5: list[int] = []
-    xs6: list[int] = 0
-    xs7: list[int] = 5
+    xs6: int = 0
+    xs7: int = 5
     assert sub(xs5, xs6, xs7) == []
 
 
 def test_sub_negative_start_index() -> None:
     """Sub normal list with negative start index and positive end index."""
     xs8: list[int] = [1, 2, 3, 4, 5, 6, 7]
-    xs9: list[int] = -2
-    xs10: list[int] = 2
+    xs9: int = -2
+    xs10: int = 2
     assert sub(xs8, xs9, xs10) == [1, 2]
 
 
 def test_sub_positive_start_index() -> None:
     """Sub normal list with positive start index and end index."""
     xs11: list[int] = [1, 2, 3, 4, 5, 6, 7, 8]
-    xs12: list[int] = 0
-    xs13: list[int] = 4
+    xs12: int = 0
+    xs13: int = 4
     assert sub(xs11, xs12, xs13) == [1, 2, 3, 4]
 
 
 def test_sub_all_negative() -> None:
     """Sub list with negative number with negative start index and end index."""
     xs14: list[int] = [-1, -2, -3, -4, -5]
-    xs15: list[int] = -1
-    xs16: list[int] = -5
+    xs15: int = -1
+    xs16: int = -5
     assert sub(xs14, xs15, xs16) == []
