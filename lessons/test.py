@@ -32,7 +32,7 @@ assert average({'Bill':[75, 94, 97], 'Annie': [88, 93, 99]}) == {'Bill': 88.6666
 
 def best_animals(a: dict[str, list[int]]) -> list[str]:
     result: list[str] = []
-    new_dict: dict[str, int] = []
+    new_dict: dict[str, int] = {}
     for key in a.keys():
         total_value = 0
         i: int = 0
